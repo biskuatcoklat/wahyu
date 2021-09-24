@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <h1>Hai Hanum :)</h1>
+        <img src="https://media0.giphy.com/media/11DFuwckOK9mdG/giphy.gif?cid=ecf05e475c3f526fcf065a0defd0ee3bb613e1b77d64b7a5&rid=giphy.gif&ct=g"> 
+        <h1>Minta IG nya donk..</h1>
+        <button id='btn_mau' onclick='linkwa("082276052469","hanum ilmu komunikasi")'>Mau</button>
+        <button id='btn_gamau' onclick='gamau(this)'
+        style='position:absolute'>Gamau</button>
+    </body>
+    <script>
+        function gamau (id){
+            var mau = document.getElementById('btn_mau');
+            var i = Math.floor(Math.random()*300)+1;
+            id.style.left = i +'px';
+            id.style.top = j+'px;'
+        }
+        function linkwa(no_hp,nama) {
+
+var h=(new Date()).getHours();
+var m=(new Date()).getMinutes();
+var s=(new Date()).getSeconds();
+var hari = "";
+if (h >= 4 && h < 10) hari = "Pagi";
+if (h >= 10 && h < 15) hari = "Siang";
+if (h >= 15 && h < 18) hari = "Sore";
+if (h >= 18 || h < 4) hari = "Malam";
+
+  var teks = "Selamat "+hari+"  "+nama+", masukka IG nya di bawah sini";
+  var teks_encode = encodeURI(teks);
+  var no_hp_encode = no_hp;
+  if(no_hp_encode.charAt(0) != "+"){
+     no_hp_encode = "+62"+parseInt(no_hp, 10);
+  }
+  
+  window.open("https://api.whatsapp.com/send?phone="+no_hp_encode+"&text="+teks_encode, "_blank");
+}
+    </script>
+</html>
